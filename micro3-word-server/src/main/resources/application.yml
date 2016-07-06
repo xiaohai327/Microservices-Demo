@@ -1,0 +1,10 @@
+# Note: all properties defined in this file are subject to replacement by the configuration server.
+spring:
+  cloud:
+    config:
+      uri: http://192.168.99.100:8888
+#      discovery:
+#        enabled: true
+#        service-id: configserver
+---
+words: fallback
