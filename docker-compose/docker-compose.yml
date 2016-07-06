@@ -1,0 +1,67 @@
+###############################################################
+### Default configuration for development environment.      ###
+###############################################################
+version: '2'
+services:
+  eureka:
+    build: ./micro1-eureka-server
+    ports:
+    - "8761:8761"
+    restart: always
+  config:
+    build: ./micro2-config-server
+    ports:
+    - "8888:8888"
+    restart: always
+  subject:
+    build: ./micro3-word-server
+    ports:
+      - "8081:8081"
+    links:
+      - eureka
+      - config
+    restart: always
+  verb:
+    build: ./micro4-word-server
+    ports:
+      - "8082:8082"
+    links:
+      - eureka
+      - config
+    restart: always
+  article:
+    build:  ./micro5-word-server
+    ports:
+      - "8083:8083"
+    links:
+      - eureka
+      - config
+    restart: always
+  adjective:
+    build:  ./micro6-word-server
+    ports:
+      - "8084:8084"
+    links:
+      - eureka
+      - config
+    restart: always
+  noun:
+    build: ./micro7-word-server
+    ports:
+      - "8085:8085"
+    links:
+      - eureka
+      - config
+    restart: always
+  sentence:
+    build: ./micro9-sentence-server
+    ports:
+      - "8020:8020"
+    links:
+      - eureka
+      - noun
+      - adjective
+      - article
+      - verb
+      - subject
+    restart: always
