@@ -1,1 +1,10 @@
-# Note: all properties defined in this file are subject to replacement by the configuration server.
+# Properties active for ALL profiles:
+---
+server:
+  port: 8020
+---
+spring:
+  application:
+    name: sentence
+
+      

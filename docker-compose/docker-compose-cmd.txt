@@ -3,6 +3,13 @@ docker-compose rm -f
 docker-compose build
 docker-compose up -d
 docker-compose start
+docker-compose ps
+-----------------------------------------------------
+Scaling containers running a given service
+docker-compose scale eureka=3
+-----------------------------------------------------
+Healing, i.e., re-running containers that have stopped
+docker-compose up --no-recreate
 ======================
 docker-machine stop default
 docker-machine start default

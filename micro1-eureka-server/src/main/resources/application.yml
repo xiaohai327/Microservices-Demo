@@ -1,22 +1,14 @@
 ---
-# This default profile is used when running a single instance completely standalone:
-spring:
-  profiles: default
+# Properties active for ALL profiles:
 server:
   port: 8761  
 eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 15
-#   hostname: localhost
-#   prefer-ip-address: true  
-  client:
+  client: 
     registerWithEureka: true
     fetchRegistry: false
-#    serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/
-  server:
-    waitTimeInMsWhenSyncEmpty: 0 
-
+    service-url:
+      defaultZone: http://${SERVER_IP:localhost}:8761/eureka/
+      
 # primary, secondary, and tertiary illustrate running 3 intercommunicating instances.  This example has them running
 # side-by-side on localhost -- which is unrealistic in production -- but does illustrate how multiple instances collaborate.
 # Run by opening 3 separate command prompts:

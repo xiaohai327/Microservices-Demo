@@ -8,7 +8,7 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>sentence-composite-server</name>
-	<description>Spring Boot Discovery Client and Sentence Composite Server</description>
+	<description>Spring Boot Sentence Composite Server</description>
 
 	<parent>
 		<groupId>org.springframework.cloud</groupId>
@@ -38,12 +38,12 @@
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-hystrix</artifactId>
+			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
 		</dependency>
 
 		<dependency>

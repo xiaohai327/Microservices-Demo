@@ -3,7 +3,9 @@ package demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import demo.dao.AdjectiveClient;
 import demo.dao.ArticleClient;
 import demo.dao.NounClient;

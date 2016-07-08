@@ -1,5 +1,5 @@
 #
-# Config Server Dockerfile
+# Generate Diffent Word Server Dockerfile
 #
 # FROM alpine:3.4
 FROM java:openjdk-8-jdk-alpine
@@ -21,16 +21,16 @@ RUN sh -c 'touch /app.jar'
 VOLUME /tmp
 
 EXPOSE 8081
-CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=subject","-DPORT=8081","-jar","/app.jar"]
+CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=subject","-DSERVER_IP=192.168.99.100","-DPORT=8081","-jar","/app.jar"]
 
 #EXPOSE 8082
-#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=verb","-DPORT=8082","-jar","/app.jar"]
+#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=verb","-DSERVER_IP=192.168.99.100","-DPORT=8082","-jar","/app.jar"]
 
 #EXPOSE 8083
-#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=article","-DPORT=8083","-jar","/app.jar"]
+#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=article","-DSERVER_IP=192.168.99.100","-DPORT=8083","-jar","/app.jar"]
 
 #EXPOSE 8084
-#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=adjective","-DPORT=8084","-jar","/app.jar"]
+#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=adjective","-DSERVER_IP=192.168.99.100","-DPORT=8084","-jar","/app.jar"]
 
 #EXPOSE 8085
-#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=noun","-DPORT=8085","-jar","/app.jar"]
+#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=noun","-DSERVER_IP=192.168.99.100","-DPORT=8085","-jar","/app.jar"]

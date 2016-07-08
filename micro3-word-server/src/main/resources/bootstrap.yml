@@ -1,17 +1,10 @@
 # Allow Eureka to recognize two apps of the same type on the same host as separate instances:
-eureka:
-  instance:
-    prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 20
-    metadata-map:
-     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
-  client:
-    register-with-eureka: true
-    fetch-registry: false
-    serviceUrl:
-      defaultZone: http://192.168.99.100:8761/eureka/
-# Properties active for ALL profiles:
 ---
+spring:
+  cloud:
+    config:
+        uri: http://${SERVER_IP:localhost}:8888
+---  
 server:
   port: ${PORT:${SERVER_PORT:0}}   # Select any available port if neither port nor server port are specified.
 

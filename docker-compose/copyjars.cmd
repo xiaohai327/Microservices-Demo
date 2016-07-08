@@ -25,3 +25,10 @@ set source=micro4-sentence-server\target
 set target=micro9-sentence-server\target
 Xcopy /Y  ..\%source%\*.jar  .\%target%\
 
+set source=micro5-zuul-server\target
+set target=micro10-zuul-server\target
+Xcopy /Y  ..\%source%\*.jar  .\%target%\
+
+set source=micro6-turbine-server\target
+set target=micro11-turbine-server\target
+Xcopy /Y  ..\%source%\*.jar  .\%target%\

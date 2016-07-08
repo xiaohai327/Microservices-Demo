@@ -1,0 +1,20 @@
+{
+  "groups": [{
+    "name": "wordConfig",
+    "type": "demo.LuckyWordController",
+    "sourceType": "demo.LuckyWordController"
+  }],
+  "properties": [
+    {
+      "name": "wordConfig.lucky-word",
+      "type": "java.lang.String",
+      "sourceType": "demo.LuckyWordController"
+    },
+    {
+      "name": "wordConfig.preamble",
+      "type": "java.lang.String",
+      "sourceType": "demo.LuckyWordController"
+    }
+  ],
+  "hints": []
+}

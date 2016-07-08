@@ -1,10 +1,7 @@
 #
 # Config Server Dockerfile
 #
-# FROM alpine:3.4
 FROM java:openjdk-8-jdk-alpine
-
-MAINTAINER Bipin Gupta 
 
 # Add OpenSSH
 RUN apk update && apk add openssh
@@ -17,5 +14,5 @@ RUN sh -c 'touch /app.jar'
 VOLUME /tmp
 
 EXPOSE 8081
-CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=subject","-DPORT=8081","-jar","/app.jar"]
+CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=subject","-DSERVER_IP=192.168.99.100","-DPORT=8081","-jar","/app.jar"]
 

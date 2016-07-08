@@ -1,0 +1,2 @@
+docker build -t bipin:zipkin .
+docker run -t –p 8030:8030 biping:zikin

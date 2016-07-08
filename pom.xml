@@ -13,7 +13,8 @@
         <module>micro2-config-server</module>
         <module>micro3-word-server</module>
         <module>micro4-sentence-server</module>
-		<module>micro5-gateway-server</module>
+		<module>micro5-zuul-server</module>
+		<module>micro6-turbine-server</module>
     </modules>
 
 </project>

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class SentenceServiceImpl implements SentenceService {
 
 	@Autowired WordService wordService;
-//	@Autowired WordServiceReactive wordService;
+	
 
 	/**
 	 * Assemble a sentence by gathering random words of each part of speech:
